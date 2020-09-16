@@ -41,3 +41,17 @@ Pozitif sayıları toplayarak çarpma işlemi yapma burda döngü kullanmam gere
 ```
 Kodları açıklayayım. For döngüsünde `$i = 0` dedim 0'dan başlayacak `$i < $sayi_1` 0'dan başlayıp belirttiğim değişkendeki sayı boyunca dönecek ben 6 verdim yani döngü 0'dan 5'e kadar gelecek bu da 6 kez dönüyor. `$i++` her seferinde 1 defa arttırır.
 Her döndüğünde `$toplam` değişkenine `$sayi_2`'yi ekler zaten amacımız 2. sayıyı 1. sayı kadar toplamak veya tam terside olabilir.
+## [Kelime Arama](/php/README.md#kelime-arama)
+Bir paragraf içinde arama yapmak. Ben bu şekilde yaparak hallettim. 2 parametre alır. 
+1. parametre `$kelime`, 2. parametre `$dizge` `explode` yöntemiyle dizgeyi parçalamamız gerekiyor kelimeleri karşılaştırmak için. 
+`for` döngüsünü 0'dan başlatıp `$dizge` uzunluğuna göre sınırladık `explode` yöntemi dizgeyi dizi haline getiriyor. 
+```php 
+        $kelime = "#title1";
+        $dizge = explode(" ", "#title1 Merhaba Dünya !");
+        for ($i = 0; $i < count($dizge); $i++) {
+            if ($dizge[$i] == $kelime) {
+                echo "Eşit";
+            }
+        }
+
+```
